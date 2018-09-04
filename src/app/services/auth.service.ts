@@ -10,15 +10,26 @@ export class AuthService {
 
   public userProfile:any;
 
+  
+  // auth0 = new auth0.WebAuth({
+  //   clientID: 'Ze8y2MOkG5OzRQT0F2VVzZaWZA1Jxby1',
+  //   domain: 'williamzv.auth0.com',
+  //   responseType: 'token id_token',
+  //   audience: 'https://williamzv.auth0.com/userinfo',
+  //   // redirectUri: 'http://localhost:4200/callback',
+  //   redirectUri: 'https://williamzv.github.io/Authapp/',
+  //   scope: 'openid profile'
+  // });
+
   auth0 = new auth0.WebAuth({
-    clientID: 'Ze8y2MOkG5OzRQT0F2VVzZaWZA1Jxby1',
-    domain: 'williamzv.auth0.com',
+    clientID: 'YOUR_CLIENT_ID',
+    domain: 'YOUR_AUTH0_DOMAIN',
     responseType: 'token id_token',
-    audience: 'https://williamzv.auth0.com/userinfo',
-    // redirectUri: 'http://localhost:4200/callback',
-    redirectUri: 'https://williamzv.github.io/Authapp/',
-    scope: 'openid profile'
+    audience: 'https://YOUR_AUTH0_DOMAIN/userinfo',
+    redirectUri: 'http://localhost:3000/callback',
+    scope: 'openid'
   });
+
 
   constructor(public router: Router) {}
 
