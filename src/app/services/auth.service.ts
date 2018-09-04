@@ -8,9 +8,9 @@ import * as auth0 from 'auth0-js';
 @Injectable()
 export class AuthService {
 
-  public userProfile:any;
+  public userProfile: any;
 
-  
+
   // auth0 = new auth0.WebAuth({
   //   clientID: 'Ze8y2MOkG5OzRQT0F2VVzZaWZA1Jxby1',
   //   domain: 'williamzv.auth0.com',
@@ -22,10 +22,10 @@ export class AuthService {
   // });
 
   auth0 = new auth0.WebAuth({
-    clientID: 'YOUR_CLIENT_ID',
-    domain: 'YOUR_AUTH0_DOMAIN',
+    clientID: 'Ze8y2MOkG5OzRQT0F2VVzZaWZA1Jxby1',
+    domain: 'williamzv.auth0.com',
     responseType: 'token id_token',
-    audience: 'https://YOUR_AUTH0_DOMAIN/userinfo',
+    audience: 'https://williamzv.auth0.com/userinfo',
     redirectUri: 'http://localhost:3000/callback',
     scope: 'openid'
   });
