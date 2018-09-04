@@ -15,7 +15,8 @@ export class AuthService {
     domain: 'williamzv.auth0.com',
     responseType: 'token id_token',
     audience: 'https://williamzv.auth0.com/userinfo',
-    redirectUri: 'http://localhost:4200/callback',
+    // redirectUri: 'http://localhost:4200/callback',
+    redirectUri: 'https://williamzv.github.io/Authapp/callback',
     scope: 'openid profile'
   });
 
